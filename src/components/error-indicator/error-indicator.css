@@ -1,0 +1,7 @@
+.error-indicator {
+    display: inline-flex;
+    align-items: center;
+}
+.error-indicator > img {
+    margin-right: 12px;
+}

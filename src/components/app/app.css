@@ -6,12 +6,3 @@
 .random-planet-container {
     margin-bottom: 16px;
 }
-
-.people-container {
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 16px;
-}
-.people-container > div {
-    margin-right: 16px;
-}

@@ -1,0 +1,12 @@
+.item-list {
+    border: 1px solid #dadada;
+    border-radius: 4px;
+    display: inline-block;
+    padding: 16px;
+    background-color: #fff;
+}
+
+.item-list .title {
+   margin: 0 0 16px;
+   color: #333;
+}

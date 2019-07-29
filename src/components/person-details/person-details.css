@@ -1,0 +1,12 @@
+.person-details {
+    border: 1px solid #dadada;
+    border-radius: 4px;
+    display: inline-block;
+    padding: 16px;
+    background-color: #fff;
+}
+
+.person-details .title {
+   margin: 0 0 16px;
+   color: #333;
+}

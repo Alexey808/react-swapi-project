@@ -16,7 +16,15 @@ export default class RandomPlanet extends React.Component {
 
   constructor() {
     super();
+  }
+
+  componentDidMount() {
     this.updatePlanet();
+    this.interval = setInterval(this.updatePlanet, 10000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.interval);
   }
 
   onPlanetLoaded = (planet) => {
@@ -26,7 +34,7 @@ export default class RandomPlanet extends React.Component {
     })
   };
 
-  updatePlanet() {
+  updatePlanet = () => {
     const id = Math.floor(Math.random()*25) + 2
     this.swapiService
       .getPlanet(id)
@@ -60,7 +68,7 @@ const PlanetView = ({planet}) => {
   return (
     <>
       <h3 className="title">Planet: {name}, Id: {id}</h3>
-      <div>
+      <ul>
         <li>
           <span>Population: </span>
           <span>{population}</span>
@@ -73,7 +81,7 @@ const PlanetView = ({planet}) => {
           <span>Diameter: </span>
           <span>{diameter}</span>
         </li>
-      </div>
+      </ul>
     </>
   );
 }
